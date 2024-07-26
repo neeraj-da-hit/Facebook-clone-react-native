@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Nav from './res/nav/Nav'
+import Navigation from './res/navigation/Navigation'
 
 const App = () => {
   return (
     <View>
-      <Nav/>
+      <Navigation/>
     </View>
   )
 }

@@ -1,12 +1,12 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Alert, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { scale, verticalScale, moderateScale as ms } from 'react-native-size-matters';
 
-const button = () => {
+const button = (props,navigation) => {
   const{text} = props;
   return (
     <TouchableOpacity style={styles.buttonStyle}>
-        <Text style={styles.text}>{text}</Text>
+        <Text style={styles.text}>{props.text}</Text>
     </TouchableOpacity>
   )
 }

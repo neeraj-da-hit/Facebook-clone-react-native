@@ -3,23 +3,20 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Login from '../screens/Login';
-import { Header } from 'react-native/Libraries/NewAppScreen';
-import Singup from '../screens/Singup';
+import Signup from '../screens/Signup';
 
-const Nav = () => {
-  
+const Navigation = () => {
     const Stack = createNativeStackNavigator();
-  
-    return (
+  return (
     <NavigationContainer>
-        <Stack.Navigator initialRouteName='login'>
-            <Stack.Screen name='login' component={Login}/>
-            <Stack.Screen name='Signup' component={Singup}/>
-        </Stack.Navigator>
+      <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='Login'>
+        <Stack.Screen name="Login" component={Login} />
+        <Stack.Screen name="Signup" component={Signup}/>
+      </Stack.Navigator>
     </NavigationContainer>
   )
 }
 
-export default Nav
+export default Navigation
 
 const styles = StyleSheet.create({})
